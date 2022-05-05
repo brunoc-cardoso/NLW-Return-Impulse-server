@@ -33,6 +33,7 @@
         "tsx": "never"
       }
     ],
+    "arrow-body-style": "off",
     "import-helpers/order-imports": [
       "warn",
       {
