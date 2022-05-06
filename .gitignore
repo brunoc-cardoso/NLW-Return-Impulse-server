@@ -1,5 +1,9 @@
 node_modules
-/dist
+dist
+
+dev.db
+*.db
+dev.db-journal
 
 .env
-dev.db
+# instead of dev.bd
