@@ -34,16 +34,21 @@
       }
     ],
     "arrow-body-style": "off",
+    "no-unused-vars": "warn",
+    "class-methods-use-this": "off",
+    "no-empty-function": "off",
+    "no-useless-constructor": "off",
     "import-helpers/order-imports": [
       "warn",
       {
         "newlinesBetween": "always",
         "groups": [
           "module",
+          "/^@/config/",
           "/^@/utils/",
-          "/^@/components|^@/screens/",
-          ["parent", "sibling", "index"],
-          "/^@/global/|^@/styles/|^@/"
+          "/^@/repositories|^@/useCases/",
+          ["parent", "sibling", "index"]
+          // "/^@/global/|^@/styles/|^@/"
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
       }
