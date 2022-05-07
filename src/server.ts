@@ -1,9 +1,6 @@
-import { NodemailerMailAdapter } from '@/adapters/nodemailer/nodemailerMailAdapter';
 import express, { Request, Response } from 'express';
 
-import { transport } from '@/config/mailtrap';
-import { prisma } from '@/config/prisma';
-
+import { NodemailerMailAdapter } from '@/adapters/nodemailer/nodemailerMailAdapter';
 import { PrismaFeedbacksRepository } from '@/repositories/prisma/PrismaFeedbacksRepository';
 import { SubmitFeedbackUseCase } from '@/useCases/SubmitFeedbackUseCase';
 
