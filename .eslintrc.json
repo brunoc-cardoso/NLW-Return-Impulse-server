@@ -46,12 +46,13 @@
           "module",
           "/^@/config/",
           "/^@/utils/",
-          "/^@/repositories|^@/useCases/",
+          "/^@/adapters|^@/repositories|^@/useCases/",
           ["parent", "sibling", "index"]
-          // "/^@/global/|^@/styles/|^@/"
         ],
         "alphabetize": { "order": "asc", "ignoreCase": true }
       }
-    ]
+    ],
+    "indent": "off",
+    "@typescript-eslint/indent": "off"
   }
 }
