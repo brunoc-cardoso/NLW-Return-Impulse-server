@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express, { Request, Response } from 'express';
 
 import { NodemailerMailAdapter } from '@/adapters/nodemailer/nodemailerMailAdapter';
@@ -7,6 +8,11 @@ import { SubmitFeedbackUseCase } from '@/useCases/SubmitFeedbackUseCase';
 const PORT = process.env.SERVER_PORT || 3333;
 const server = express();
 
+server.use(
+  cors({
+    origin: '*',
+  }),
+);
 server.use(express.json());
 
 server.post('/feedbacks', async (request: Request, response: Response) => {
