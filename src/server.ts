@@ -1,7 +1,7 @@
 import cors from 'cors';
 import express, { Request, Response } from 'express';
 
-import { NodemailerMailAdapter } from '@/adapters/nodemailer/nodemailerMailAdapter';
+import { NodemailerMailAdapter } from '@/adapters/nodemailer/NodemailerMailAdapter';
 import { PrismaFeedbacksRepository } from '@/repositories/prisma/PrismaFeedbacksRepository';
 import { SubmitFeedbackUseCase } from '@/useCases/SubmitFeedbackUseCase';
 
