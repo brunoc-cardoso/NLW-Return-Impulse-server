@@ -8,11 +8,7 @@ import { SubmitFeedbackUseCase } from '@/useCases/SubmitFeedbackUseCase';
 const PORT = process.env.SERVER_PORT || 3333;
 const server = express();
 
-server.use(
-  cors({
-    origin: '*',
-  }),
-);
+server.use(cors());
 server.use(express.json());
 
 server.post('/feedbacks', async (request: Request, response: Response) => {
