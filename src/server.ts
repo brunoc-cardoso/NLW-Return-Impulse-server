@@ -5,7 +5,7 @@ import { NodemailerMailAdapter } from '@/adapters/nodemailer/NodemailerMailAdapt
 import { PrismaFeedbacksRepository } from '@/repositories/prisma/PrismaFeedbacksRepository';
 import { SubmitFeedbackUseCase } from '@/useCases/SubmitFeedbackUseCase';
 
-const PORT = process.env.SERVER_PORT || 3333;
+const PORT = process.env.SERVER_PORT || process.env.PORT || 3333;
 const server = express();
 
 server.use(cors());
