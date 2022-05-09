@@ -14,23 +14,17 @@ server.use(express.json());
 server.post('/feedbacks', async (request: Request, response: Response) => {
   const { type, comment, screenshot } = request.body;
 
-  try {
-    const prismaFeedbacksRepository = new PrismaFeedbacksRepository();
-    const nodemailerMailAdapter = new NodemailerMailAdapter();
+  const prismaFeedbacksRepository = new PrismaFeedbacksRepository();
+  const nodemailerMailAdapter = new NodemailerMailAdapter();
 
-    const submitFeedbackUseCase = new SubmitFeedbackUseCase(
-      prismaFeedbacksRepository,
-      nodemailerMailAdapter,
-    );
+  const submitFeedbackUseCase = new SubmitFeedbackUseCase(
+    prismaFeedbacksRepository,
+    nodemailerMailAdapter,
+  );
 
-    await submitFeedbackUseCase.execute({ type, comment, screenshot });
+  await submitFeedbackUseCase.execute({ type, comment, screenshot });
 
-    return response.status(201).send();
-  } catch (error) {
-    console.log('[error]: ', error);
-
-    return response.status(500).send();
-  }
+  return response.status(201).send();
 });
 
 server.listen(PORT, () => {
